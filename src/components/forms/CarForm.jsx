@@ -28,10 +28,15 @@ export default function CarForm({ car, submitHandler }) {
     formState: { errors, isValid, isDirty, isSubmitting },
     reset,
     control,
+    formState,
   } = useForm({
     resolver: yupResolver(schema),
     mode: 'onChange',
     defaultValues: car || defaults,
+  });
+
+  useEffect(() => {
+    console.log(formState);
   });
 
   useEffect(() => {
@@ -70,7 +75,7 @@ export default function CarForm({ car, submitHandler }) {
           )}
         />
       </div>
-       <div style={formRowStyle}>
+      <div style={formRowStyle}>
         <Controller
           control={control}
           name="bhp"
@@ -125,7 +130,7 @@ export default function CarForm({ car, submitHandler }) {
         >
           Submit
         </Button>
-      </div> 
+      </div>
     </form>
   );
 }
