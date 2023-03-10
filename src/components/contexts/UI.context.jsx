@@ -1,4 +1,5 @@
 import React, { createContext, useState, useCallback } from 'react';
+import { CarsContext } from './car.context';
 
 export const UIContext = createContext({
   snackbar: {

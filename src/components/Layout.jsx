@@ -40,7 +40,7 @@ function Layout() {
         <TempHeader />
       </header>
       <main>
-        {JSON.stringify({ isOpen: open, severity, handleClose, message })}
+        {/* {JSON.stringify({ isOpen: open, severity, handleClose, message })} */}
         <Container maxWidth="md">
           <Outlet />
         </Container>
